@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="750.0" prefWidth="900.0" style="-fx-background-color: #e5e5e3;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.womanstorefinal.ShopController">
+   <children>
+      <AnchorPane layoutX="397.0" layoutY="70.0" prefHeight="534.0" prefWidth="503.0" style="-fx-background-color: #e5e5e3;">
+         <children>
+            <Label fx:id="productNameLabel" alignment="CENTER" layoutX="176.0" layoutY="319.0" prefHeight="27.0" prefWidth="155.0" text="Name">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="176.0" layoutY="376.0" prefHeight="27.0" prefWidth="155.0" text="Quantity:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="3.0" layoutY="376.0" prefHeight="27.0" prefWidth="155.0" text="Size:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="345.0" layoutY="376.0" prefHeight="27.0" prefWidth="155.0" text="Price:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="productSizeLabel" alignment="CENTER" layoutY="403.0" prefHeight="52.0" prefWidth="161.0" style="-fx-background-color: fdbac5;">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="productItemsLabel" alignment="CENTER" layoutX="174.0" layoutY="403.0" prefHeight="52.0" prefWidth="155.0" style="-fx-background-color: fdbac5;">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="productPriceLabel" alignment="CENTER" layoutX="342.0" layoutY="403.0" prefHeight="52.0" prefWidth="161.0" style="-fx-background-color: fdbac5;">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="productImageView" fitHeight="275.0" fitWidth="287.0" layoutX="109.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true" />
+            <AnchorPane layoutY="466.0" prefHeight="60.0" prefWidth="503.0" style="-fx-background-color: #CACED0;">
+               <children>
+                  <Label fx:id="ErrorMsgLbl" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="37.0" prefWidth="467.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+      <AnchorPane prefHeight="70.0" prefWidth="900.0" style="-fx-background-color: fdbac5;">
+         <children>
+            <Label alignment="CENTER" cache="true" layoutX="302.0" layoutY="18.0" prefHeight="35.0" prefWidth="296.0" text="Welcome to the shop !" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri Bold Italic" size="28.0" />
+               </font>
+            </Label>
+            <Button fx:id="generalInfoButton" layoutX="14.0" layoutY="18.0" mnemonicParsing="false" onAction="#showGeneralInfo" prefHeight="35.0" prefWidth="104.0" text="General infos" />
+            <Button fx:id="quitBtn" layoutX="854.0" layoutY="-3.0" mnemonicParsing="false" onAction="#quitApp" prefHeight="27.0" prefWidth="46.0" style="-fx-background-color: #ed182a;" text="X" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+      <AnchorPane layoutY="70.0" prefHeight="512.0" prefWidth="274.0" style="-fx-background-color: #e5e5e3;">
+         <children>
+            <ScrollPane fx:id="scrollPane" layoutY="33.0" prefHeight="534.0" prefWidth="392.0">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="578.0" prefWidth="376.0">
+                     <children>
+                        <VBox fx:id="productContainer" layoutY="-3.0" prefHeight="534.0" prefWidth="392.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <Label alignment="CENTER" layoutX="140.0" layoutY="3.0" prefHeight="26.0" prefWidth="112.0" text="Items">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="397.0" layoutY="604.0" prefHeight="145.0" prefWidth="503.0" style="-fx-background-color: #CACED0;">
+         <children>
+            <Button fx:id="modifyButton" layoutX="174.0" layoutY="83.0" mnemonicParsing="false" onAction="#modifyProduct" prefHeight="37.0" prefWidth="155.0" text="Modify Item">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="addButton" layoutX="14.0" layoutY="27.0" mnemonicParsing="false" onAction="#addProduct" prefHeight="37.0" prefWidth="155.0" text="Add Item">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="deleteButton" layoutX="334.0" layoutY="27.0" mnemonicParsing="false" onAction="#deleteProduct" prefHeight="37.0" prefWidth="155.0" text="Delete Item">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="5.0" layoutY="654.0" prefHeight="95.0" prefWidth="392.0">
+         <children>
+            <Button fx:id="SellBtn" mnemonicParsing="false" prefHeight="37.0" prefWidth="155.0" text="Sell">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="BuyStockBtn" layoutX="223.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="155.0" text="Buy stock">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <CheckBox fx:id="discountCheckBox" layoutX="264.0" layoutY="55.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="73.0" text="Discount" />
+            <ComboBox fx:id="categoryFilter" layoutX="3.0" layoutY="55.0" onAction="#filterProducts" prefWidth="150.0" promptText="All">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="All" />
+                     <String fx:value="Clothes" />
+                     <String fx:value="Shoes" />
+                     <String fx:value="Accessories" />
+                  </FXCollections>
+               </items>
+            </ComboBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

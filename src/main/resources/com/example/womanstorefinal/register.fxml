@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="520.0" style="-fx-background-color: #e5e5e3;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.womanstorefinal.RegisterController">
+   <children>
+      <AnchorPane prefHeight="82.0" prefWidth="520.0" style="-fx-background-color: fdbac5;">
+         <children>
+            <ImageView fx:id="registerImageView" fitHeight="91.0" fitWidth="97.0" layoutX="25.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Images/Register.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="170.0" layoutY="29.0" text="Create an account" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="shieldImageView" fitHeight="91.0" fitWidth="114.0" layoutX="392.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Images/shld.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="97.0" layoutY="104.0" text="Firstname">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="firstnameTextField" alignment="CENTER" layoutX="37.0" layoutY="129.0" prefHeight="25.0" prefWidth="181.0" promptText="Firstname" />
+      <TextField fx:id="lastnameTextField" alignment="CENTER" layoutX="304.0" layoutY="129.0" prefHeight="25.0" prefWidth="181.0" promptText="Lastname" />
+      <TextField fx:id="UsernameTextField" alignment="CENTER" layoutX="173.0" layoutY="195.0" prefHeight="25.0" prefWidth="181.0" promptText="Username" />
+      <PasswordField fx:id="setPasswordField" alignment="CENTER" layoutX="35.0" layoutY="253.0" prefHeight="25.0" prefWidth="181.0" promptText="Password" />
+      <PasswordField fx:id="confirmPasswordField" alignment="CENTER" layoutX="305.0" layoutY="253.0" prefHeight="25.0" prefWidth="181.0" promptText="Confirm Password" />
+      <Label layoutX="100.0" layoutY="230.0" text="Password">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="367.0" layoutY="104.0" text="Lastname">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="234.0" layoutY="170.0" text="Username">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="346.0" layoutY="230.0" text="Repeat Password">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="registerButton" layoutX="170.0" layoutY="316.0" mnemonicParsing="false" onAction="#registerButtonOnAction" prefHeight="25.0" prefWidth="181.0" style="-fx-background-color: fdbac5;" text="Register" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="closeButton" layoutX="171.0" layoutY="359.0" mnemonicParsing="false" onAction="#closeButtonOnAction" prefHeight="25.0" prefWidth="181.0" style="-fx-background-color: fdbac5;" text="Go Back" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="registrationMsgLabel" alignment="TOP_CENTER" layoutX="125.0" layoutY="288.0" prefHeight="19.0" prefWidth="281.0" textFill="#57bf40">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="confirmPasswordLabel" alignment="TOP_CENTER" layoutX="123.0" layoutY="288.0" prefHeight="19.0" prefWidth="281.0" textFill="#e14132">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
